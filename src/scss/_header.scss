@@ -1,0 +1,36 @@
+@use 'custom' as *;
+
+.heaerSection {
+  .search-bar {
+    position: relative;
+
+    input[type='text'] {
+      padding: 8px !important;
+      border: 1px solid $light !important;
+      background-color: $light !important;
+      padding-left: 50px !important;
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.offcanvas {
+  .offcanvas-header {
+    padding: 30px;
+  }
+  .offcanvas-body {
+    padding: 30px;
+  }
+
+  .border-bottom {
+    width: 100%;
+    height: 1px;
+    color: $light;
+  }
+}

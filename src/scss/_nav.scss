@@ -1,0 +1,17 @@
+@use 'custom' as *;
+
+.navbar{
+    .navbar-nav{
+        .nav-item{
+            color: $muted-color;
+            font-size: 16px;
+
+            &.active{
+                .nav-link{
+                    color: $dark !important;
+                    border-bottom: 2px solid $primary;
+                }
+            }
+        }
+    }
+}
