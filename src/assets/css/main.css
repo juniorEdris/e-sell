@@ -11025,6 +11025,11 @@ select {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .sidebar-main .sidebar {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   .heroSection .sidebar-main .sidebar {
     width: 80px;
