@@ -10903,6 +10903,27 @@ select {
   color: #f6f7fb;
 }
 
+.cart-item {
+  gap: 15px;
+}
+.cart-item .cart-item-img {
+  height: 110px;
+  width: 110px;
+  background-color: #f6f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.cart-item .cart-item-counts .iconPlus {
+  font-size: 22px;
+  cursor: pointer;
+}
+.cart-item .cart-item-counts .iconMinus {
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .navbar .navbar-nav .nav-item {
   color: #999fae;
   font-size: 16px;
@@ -11153,8 +11174,8 @@ select {
   position: absolute;
   width: 100px;
   height: 40px;
-  background: #E76458;
-  border: 2px solid #FFFFFF;
+  background: #e76458;
+  border: 2px solid #ffffff;
   border-radius: 24px;
   top: 20px;
   left: 71%;
@@ -11186,10 +11207,10 @@ select {
   background: #906145;
 }
 .exploreProducts .carousole-item .colors .color__pink {
-  background: #FAB8C4;
+  background: #fab8c4;
 }
 .exploreProducts .carousole-item .colors .color__yellow {
-  background: #FFDC60;
+  background: #ffdc60;
 }
 
 .slick-arrow.slick-next {
@@ -11203,6 +11224,18 @@ select {
   box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+}
+@media only screen and (max-width: 1024px) {
+  .slick-arrow.slick-next {
+    top: -30px;
+    left: 89%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .slick-arrow.slick-next {
+    top: -20px;
+    left: 91%;
+  }
 }
 .slick-arrow.slick-next:before {
   content: url("/src/images/2pt-stroke.png");
@@ -11221,6 +11254,16 @@ select {
   box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+}
+@media only screen and (max-width: 1024px) {
+  .slick-arrow.slick-prev {
+    top: -30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .slick-arrow.slick-prev {
+    top: -20px;
+  }
 }
 .slick-arrow.slick-prev:before {
   content: url("/src/images/2pt-stroke1.png");

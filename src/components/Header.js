@@ -1,8 +1,9 @@
 import React from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiMinusCircle } from 'react-icons/fi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BiCart } from 'react-icons/bi';
 import { CgUserList } from 'react-icons/cg';
+import { BsPlusCircle } from 'react-icons/bs';
 
 const Header = () => {
   return (
@@ -64,7 +65,50 @@ const Header = () => {
         </div>
         <div className='border-bottom'></div>
         <div class='offcanvas-body  d-flex flex-column justify-content-between'>
-          <div>Body Starts here!</div>
+          <div>
+            <div className='cart-item d-flex align-items-center mb-4'>
+              <div className='cart-item-img'>
+                <img src='/assets/images/image-194.png' alt='cart' />
+              </div>
+              <div className='cart-item-counts'>
+                <h5 className='text-black'>Commodo Blown Lamp</h5>
+                <div className='mt-2'>
+                  <span className='iconMinus'>
+                    <FiMinusCircle />
+                  </span>
+                  <span className='font-w-500 font-16 px-4'> 12</span>
+                  <span className='iconPlus'>
+                    <BsPlusCircle />
+                  </span>
+                </div>
+              </div>
+              <div>
+                <h5 className='text-black font-w-500'>$275</h5>
+              </div>
+            </div>
+
+            <div className='cart-item d-flex align-items-center'>
+              <div className='cart-item-img'>
+                <img src='/assets/images/image-195.png' alt='cart' />
+              </div>
+              <div className='cart-item-counts'>
+                <h5 className='text-black'>Commodo Blown Lamp</h5>
+                <div className='mt-2'>
+                  <span className='iconMinus'>
+                    <FiMinusCircle />
+                  </span>
+                  <span className='font-w-500 font-16 px-4'> 12</span>
+                  <span className='iconPlus'>
+                    <BsPlusCircle />
+                  </span>
+                </div>
+              </div>
+              <div>
+                <h5 className='text-black font-w-500'>$275</h5>
+              </div>
+            </div>
+          </div>
+
           <div className='subtotal'>
             <div className='border-bottom'></div>
             <div className='d-flex justify-content-between pt-4'>
