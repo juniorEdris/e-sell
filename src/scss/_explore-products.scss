@@ -1,124 +1,135 @@
 @use 'custom' as *;
+@use 'breakpoint' as *;
 
-.exploreProducts{
-    position: relative;
-    margin: 80px 0;
+.exploreProducts {
+  position: relative;
+  margin: 80px 0;
 
-    .title{
-        font-size: 48px;
-        color: $dark;
-        font-weight: 700;
+  .title {
+    font-size: 48px;
+    color: $dark;
+    font-weight: 700;
+  }
+
+  .carousole-item {
+    .item-img {
+      position: relative;
+      height: 276px;
+      width: 276px;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+      }
+      .off-sale {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #e76458;
+        border: 2px solid #ffffff;
+        border-radius: 24px;
+        top: 20px;
+        left: 71%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
     }
 
-    .carousole-item{
-        .item-img{
-            position: relative;
-            height: 276px;
-            width: 276px;
-            img{
-                height: 100%;
-                width: 100%;
-                border-radius: 20px;
-            }
-            .off-sale{
-                position: absolute;
-                width: 100px;
-                height: 40px;
-                background: #E76458;
-                border: 2px solid #FFFFFF;
-                border-radius: 24px;
-                top: 20px;
-                left: 71%;
-                color: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 16px;
-            }
+    .colors {
+      .color {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
 
+        &.active {
+          &:after {
+            position: absolute;
+            content: '';
+            top: -4px;
+            left: -4px;
+            height: 23px;
+            width: 23px;
+            border: 1px solid #292930;
+            background: transparent;
+            border-radius: 50%;
+          }
         }
-        
-        .colors{
-            .color{
-                height: 15px;
-                width: 15px;
-                border-radius: 50%;
-                position: relative;
-                cursor: pointer;
 
-                &.active{
-                    &:after{
-                        position: absolute;
-                        content: '';
-                        top: -4px;
-                        left: -4px;
-                        height: 23px;
-                        width: 23px;
-                        border: 1px solid #292930;
-                        background: transparent;
-                        border-radius: 50%;
-                    }
-                    
-                }
-
-                &__brown{
-                    background: #906145;
-                }
-                &__pink{
-                    background: #FAB8C4;
-                }
-                &__yellow{
-                    background: #FFDC60;
-                }
-            }
-               
+        &__brown {
+          background: #906145;
         }
+        &__pink {
+          background: #fab8c4;
+        }
+        &__yellow {
+          background: #ffdc60;
+        }
+      }
     }
-    
+  }
 }
 
+.slick-arrow {
+  &.slick-next {
+    position: absolute;
+    top: -48px;
+    left: 84%;
+    height: 48px;
+    width: 48px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
 
-.slick-arrow{
-    &.slick-next{
-        position: absolute;
-        top: -48px;
-        left: 84%;
-        height: 48px;
-        width: 48px;
-        background: white;
-        border-radius: 50%;
-        box-shadow: 2px 4px 14px -7px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 2px 4px 14px -7px rgba(0,0,0,0.75);
-        -moz-box-shadow: 2px 4px 14px -7px rgba(0,0,0,0.75);
-
-        &:before{
-            content: url('/src/images/2pt-stroke.png');
-            height: 48px;
-            width: 48px;
-            background: light
-        } 
-       
+    @include tablet {
+      top: -30px;
+      left: 89%;
     }
 
-    &.slick-prev{
-        position: absolute;
-        top: -48px;
-        left: 79%;
-        height: 48px;
-        width: 48px;
-        background: white;
-        border-radius: 50%;
-        box-shadow: 2px 4px 14px -7px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 2px 4px 14px -7px rgba(0,0,0,0.75);
-        -moz-box-shadow: 2px 4px 14px -7px rgba(0,0,0,0.75);
-       
-
-        &:before{
-            content: url('/src/images/2pt-stroke1.png');
-            height: 48px;
-            width: 48px;
-            background: white;
-        }
-       
+    @include mobile {
+      top: -20px;
+      left: 91%;
     }
+
+    &:before {
+      content: url('/src/images/2pt-stroke.png');
+      height: 48px;
+      width: 48px;
+      background: light;
+    }
+  }
+
+  &.slick-prev {
+    position: absolute;
+    top: -48px;
+    left: 79%;
+    height: 48px;
+    width: 48px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
+
+    @include tablet {
+      top: -30px;
+    }
+
+    @include mobile {
+      top: -20px;
+    }
+
+    &:before {
+      content: url('/src/images/2pt-stroke1.png');
+      height: 48px;
+      width: 48px;
+      background: white;
+    }
+  }
 }
