@@ -9,12 +9,12 @@ const Header = () => {
     <>
       <div className='container heaerSection py-4'>
         <div className='row align-items-center '>
-          <div className='col-md-3'>
+          <div className='col-3 col-md-3'>
             <div className='logo'>
               <img src='/assets/images/logo.png' alt='logo' />
             </div>
           </div>
-          <div className='col-md-6'>
+          <div className='col-6 col-md-6'>
             <div className='search-bar text-secondary'>
               <input
                 className='form-control rounded-pill font-16'
@@ -26,7 +26,7 @@ const Header = () => {
               </span>
             </div>
           </div>
-          <div className='col-md-3'>
+          <div className='col-3 col-md-3'>
             <div className='icons d-flex align-items-center justify-content-end'>
               <span className='me-3 h4 text-black cursor-pointer'>
                 <AiOutlineHeart />

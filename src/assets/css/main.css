@@ -10919,10 +10919,24 @@ select {
 .heroSection .banner-img {
   height: 100%;
   width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .banner-img {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .heroSection .banner-img img {
   height: 100%;
   width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .banner-img img {
+    object-fit: cover;
+    border-radius: 15px;
+  }
 }
 .heroSection .sidebar-main {
   position: relative;
@@ -10932,31 +10946,76 @@ select {
   position: absolute;
   border-radius: 15px;
   width: 100%;
-  top: 0;
+  top: -74px;
   left: 0;
   transition: width 0.1s ease-in-out;
   box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
 }
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar {
+    top: 0;
+    width: 80px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar {
+    top: 0;
+    width: 80px;
+    text-align: center;
+  }
+}
 .heroSection .sidebar-main .sidebar .sidebar-nav-head {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 1.15rem 2rem !important;
 }
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar .sidebar-nav-head .text-dept {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar .sidebar-nav-head .text-dept {
+    display: none;
+  }
+}
 .heroSection .sidebar-main .sidebar nav ul {
-  padding: 0;
   margin: 0;
   list-style: none;
   padding: 0 2rem;
 }
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul {
+    width: 80px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul {
+    width: 80px;
+    padding: 0;
+  }
+}
 .heroSection .sidebar-main .sidebar nav ul li {
   display: block;
   align-items: center;
-  padding: 0.7rem 0;
+  padding: 0.92rem 0;
   position: relative;
   background-color: transparent;
   transition: background-color 0.25s ease-in-out;
+}
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul li {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul li {
+    padding: 0;
+  }
 }
 .heroSection .sidebar-main .sidebar nav ul li:not(:last-child) {
   border-bottom: 2px solid #cbd3d9;
@@ -10967,8 +11026,30 @@ select {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul li a {
+    padding: 0.6rem 0;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul li a {
+    padding: 0.6rem 0;
+    justify-content: center;
+  }
+}
 .heroSection .sidebar-main .sidebar nav ul li a .text {
   font-size: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul li a .text {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul li a .text {
+    display: none;
+  }
 }
 .heroSection .sidebar-main .sidebar nav ul li .sub-menu {
   position: absolute;
@@ -10997,20 +11078,21 @@ select {
   -webkit-box-shadow: 12px 6px 5px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 12px 6px 5px -10px rgba(0, 0, 0, 0.75);
 }
-.heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item1 {
-  flex: 1;
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu {
+    width: 700px;
+    text-align: left;
+  }
 }
-.heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item2 {
-  flex: 1;
-}
-.heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item3 {
-  flex: 1;
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu {
+    width: 400px;
+    text-align: left;
+  }
 }
 .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 {
-  flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 .item4-img1 {
   flex: 1 100%;
@@ -11018,44 +11100,36 @@ select {
 .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 .item4-img2 {
   flex: 1 100%;
 }
-.heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 .item4-col {
-  gap: 15px;
+.heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 {
+  border-left: 1px solid #f6f7fb;
+  padding-left: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 {
+    border-left: none;
+    padding-left: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item.item4 {
+    border-left: none;
+    padding-left: 0px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection .sidebar-main .sidebar nav ul li .sub-menu.mega-menu .list-item {
+    margin-bottom: 20px;
+  }
 }
 .heroSection .sidebar-main .sidebar nav ul li:hover .mega-menu {
-  display: flex;
+  display: block;
 }
 
-@media (max-width: 1200px) {
-  .heroSection .sidebar-main .sidebar {
-    width: 80px;
-    text-align: center;
-  }
-  .heroSection .sidebar-main .sidebar nav ul {
-    padding: 0;
-  }
-  .heroSection .sidebar-main .sidebar nav ul li {
-    position: relative;
-    padding: 0;
-  }
-  .heroSection .sidebar-main .sidebar nav ul li .text {
-    display: none;
-  }
-  .heroSection .sidebar-main .sidebar nav ul li:hover .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background: #5956e9;
-    height: 38px;
-    width: 100px;
-    top: 0;
-    left: 100%;
-  }
-  .heroSection .sidebar-main .sidebar nav ul li a {
-    padding: 0.6rem 0;
-    justify-content: center;
-  }
-}
 .exploreProducts {
   position: relative;
   margin: 80px 0;

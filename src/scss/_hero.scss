@@ -1,4 +1,5 @@
 @use 'custom' as *;
+@use 'breakpoint' as *;
 
 .heroSection {
   border-bottom: 1px solid $light;
@@ -6,10 +7,25 @@
   .banner-img {
     height: 100%;
     width: 100%;
+    text-align: center;
+
+    // @include tablet {
+    //   font-size: 80%;
+    // }
+
+    @include mobile {
+      height: 90%;
+      width: 90%;
+      margin: 0 auto;
+    }
 
     img {
       height: 100%;
       width: 100%;
+      @include mobile {
+        object-fit: cover;
+        border-radius: 15px;
+      }
     }
   }
   .sidebar-main {
@@ -20,30 +36,69 @@
       position: absolute;
       border-radius: 15px;
       width: 100%;
-      top: 0;
+      top: -74px;
       left: 0;
       transition: width 0.1s ease-in-out;
       box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
       -webkit-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 2px 4px 14px -7px rgba(0, 0, 0, 0.75);
 
+      @include tablet {
+        top: 0;
+        width: 80px;
+        text-align: center;
+      }
+
+      @include mobile {
+        top: 0;
+        width: 80px;
+        text-align: center;
+      }
+
       .sidebar-nav-head {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         padding: 1.15rem 2rem !important;
+
+        .text-dept {
+          @include tablet {
+            display: none;
+          }
+          @include mobile {
+            display: none;
+          }
+        }
       }
 
       nav {
         ul {
-          padding: 0;
           margin: 0;
           list-style: none;
           padding: 0 2rem;
+
+          @include tablet {
+            width: 80px;
+            padding: 0;
+          }
+
+          @include mobile {
+            width: 80px;
+            padding: 0;
+          }
+
           li {
             // position: relative;
             display: block;
             align-items: center;
-            padding: 0.7rem 0;
+            padding: 0.92rem 0;
+
+            @include tablet {
+              padding: 0;
+            }
+
+            @include mobile {
+              padding: 0;
+            }
 
             &:not(:last-child) {
               border-bottom: 2px solid $light-muted-color;
@@ -57,8 +112,25 @@
               display: flex;
               align-items: center;
               justify-content: space-between;
+
+              @include tablet {
+                padding: 0.6rem 0;
+                justify-content: center;
+              }
+
+              @include mobile {
+                padding: 0.6rem 0;
+                justify-content: center;
+              }
+
               .text {
                 font-size: 16px;
+                @include tablet {
+                  display: none;
+                }
+                @include mobile {
+                  display: none;
+                }
               }
             }
 
@@ -86,28 +158,26 @@
               &.mega-menu {
                 width: 860px;
                 display: none;
-                // flex-wrap: wrap;
                 padding: 60px 40px;
                 border-radius: 15px;
                 box-shadow: 12px 6px 5px -10px rgba(0, 0, 0, 0.75);
                 -webkit-box-shadow: 12px 6px 5px -10px rgba(0, 0, 0, 0.75);
                 -moz-box-shadow: 12px 6px 5px -10px rgba(0, 0, 0, 0.75);
 
+                @include tablet {
+                  width: 700px;
+                  text-align: left;
+                }
+
+                @include mobile {
+                  width: 400px;
+                  text-align: left;
+                }
+
                 .list-item {
-                  &.item1 {
-                    flex: 1;
-                  }
-                  &.item2 {
-                    flex: 1;
-                  }
-                  &.item3 {
-                    flex: 1;
-                  }
                   &.item4 {
-                    flex: 2;
                     display: flex;
                     flex-direction: column;
-                    gap: 15px;
 
                     .item4-img1 {
                       flex: 1 100%;
@@ -115,10 +185,25 @@
                     .item4-img2 {
                       flex: 1 100%;
                     }
+                  }
 
-                    .item4-col {
-                      gap: 15px;
+                  &.item4 {
+                    border-left: 1px solid $light;
+                    padding-left: 30px;
+                    @include tablet {
+                      border-left: none;
+                      padding-left: 0px;
                     }
+                    @include mobile {
+                      border-left: none;
+                      padding-left: 0px;
+                    }
+                  }
+                  @include tablet {
+                    margin-bottom: 20px;
+                  }
+                  @include mobile {
+                    margin-bottom: 20px;
                   }
                 }
               }
@@ -126,50 +211,7 @@
 
             &:hover {
               .mega-menu {
-                display: flex;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .heroSection {
-    .sidebar-main {
-      .sidebar {
-        width: 80px;
-        text-align: center;
-
-        nav {
-          ul {
-            padding: 0;
-            li {
-              position: relative;
-              padding: 0;
-
-              .text {
-                display: none;
-              }
-
-              &:hover {
-                .text {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  position: absolute;
-                  background: $primary;
-                  height: 38px;
-                  width: 100px;
-                  top: 0;
-                  left: 100%;
-                }
-              }
-              a {
-                padding: 0.6rem 0;
-                justify-content: center;
+                display: block;
               }
             }
           }
